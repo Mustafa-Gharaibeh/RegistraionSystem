@@ -23,11 +23,13 @@ public class StudentDAOImpl implements StudentDAO {
         return false;
     }
 
-    public boolean updateStudent(Student newStudent) {
+    public boolean updateStudent(Student student) {
         return false;
     }
 
-    public boolean deleteById(String id) {
-        return false;
+    public boolean deleteById(int id) throws SQLException {
+        String query = "delete From student.student where id ="+id;
+
+        return DeleteUpdateDB.delete(query);
     }
 }

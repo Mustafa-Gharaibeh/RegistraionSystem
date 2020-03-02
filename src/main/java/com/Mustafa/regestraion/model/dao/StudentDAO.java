@@ -9,5 +9,5 @@ public interface StudentDAO {
     Student findByEmail(String email) throws SQLException;
     boolean createStudent(Student newStudent);
     boolean updateStudent(Student newStudent);
-    boolean deleteById(String id);
+    boolean deleteById(int id) throws SQLException;
 }

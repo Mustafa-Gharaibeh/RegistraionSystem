@@ -13,5 +13,15 @@ public class Main {
         System.out.println(student.toString());
         Student student1= studentDAO.findByEmail("'rrr'");
         System.out.println(student1.toString());
+
+
+       if( studentDAO.deleteById(2))
+       {
+           System.out.println("delete record successfully");
+
+       }
+
+       else
+           System.out.println("delete record failed");
     }
 }

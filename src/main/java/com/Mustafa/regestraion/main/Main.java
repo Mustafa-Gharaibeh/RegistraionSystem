@@ -2,7 +2,7 @@ package com.Mustafa.regestraion.main;
 
 import com.Mustafa.regestraion.model.dao.StudentDAO;
 import com.Mustafa.regestraion.model.dao.impl.StudentDAOImpl;
-import com.Mustafa.regestraion.model.entity.StudentBuilder;
+import com.Mustafa.regestraion.model.entity.student.StudentBuilder;
 
 import java.sql.SQLException;
 

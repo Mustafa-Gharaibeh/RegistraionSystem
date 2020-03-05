@@ -1,6 +1,6 @@
 package com.Mustafa.regestraion.model.dao;
 
-import com.Mustafa.regestraion.model.entity.Student;
+import com.Mustafa.regestraion.model.entity.student.Student;
 
 import java.sql.SQLException;
 

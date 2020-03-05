@@ -13,8 +13,8 @@ public class DBConnection {
 
     public static Connection getInstance() throws SQLException {
         if (connection==null){
-            connection= DriverManager.getConnection("jdbc:mysql://localhost:52413/?user=root","root","root@JEA");
-
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=root",
+                    "root", "root");
         }
         return connection;
     }

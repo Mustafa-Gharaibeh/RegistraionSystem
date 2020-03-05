@@ -6,8 +6,12 @@ import java.sql.SQLException;
 
 public interface StudentDAO {
     Student findById(String id) throws SQLException;
+
     Student findByEmail(String email) throws SQLException;
-    boolean createStudent(Student newStudent);
-    boolean updateStudent(Student newStudent);
+
+    boolean createStudent(Student newStudent) throws SQLException;
+
+    boolean updateStudent(Student newStudent) throws SQLException;
+
     boolean deleteById(int id) throws SQLException;
 }

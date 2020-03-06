@@ -1,17 +1,15 @@
 package com.Mustafa.regestraion.model.dao;
 
-import com.Mustafa.regestraion.model.entity.Student;
-
-import java.sql.SQLException;
+import com.Mustafa.regestraion.model.entity.student.Student;
 
 public interface StudentDAO {
-    Student findById(String id) throws SQLException;
+    Student findById(String id);
 
-    Student findByEmail(String email) throws SQLException;
+    Student findByEmail(String email);
 
-    boolean createStudent(Student newStudent) throws SQLException;
+    boolean createStudent(Student newStudent);
 
-    boolean updateStudent(Student newStudent) throws SQLException;
+    boolean updateStudent(Student newStudent);
 
-    boolean deleteById(int id) throws SQLException;
+    boolean deleteById(int id);
 }

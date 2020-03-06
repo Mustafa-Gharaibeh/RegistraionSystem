@@ -8,10 +8,16 @@ import java.sql.Statement;
 
 public class UpdateDB {
 
-    protected static boolean Update(String query) throws SQLException {
+    protected static boolean Update(String query) {
         Connection connection = DBConnection.getInstance();
-        Statement statement = connection.createStatement();
-        return statement.executeUpdate(query) != 0;
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+            return statement.executeUpdate(query) != 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
 }

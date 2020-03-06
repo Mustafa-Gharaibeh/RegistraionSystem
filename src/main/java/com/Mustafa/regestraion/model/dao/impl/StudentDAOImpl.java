@@ -1,22 +1,22 @@
 package com.Mustafa.regestraion.model.dao.impl;
 
 import com.Mustafa.regestraion.model.dao.StudentDAO;
-import com.Mustafa.regestraion.model.entity.Student;
-
-import java.sql.SQLException;
+import com.Mustafa.regestraion.model.entity.student.Student;
 
 public class StudentDAOImpl implements StudentDAO {
-    public Student findById(String id) throws SQLException {
-        String query = "SELECT * From registration.student where id=" + id;
-        return FindDB.find(query);
+    public Student findById(String id) {
+        StringBuilder query = new StringBuilder("SELECT * From registration.student where id= ");
+        query.append(id);
+        return FindStudentDB.find(query);
     }
 
-    public Student findByEmail(String email) throws SQLException {
-        String query = "SELECT * From registration.student where Email = " + email;
-        return FindDB.find(query);
+    public Student findByEmail(String email) {
+        StringBuilder query = new StringBuilder("SELECT * From registration.student where Email = ");
+        query.append(email);
+        return FindStudentDB.find(query);
     }
 
-    public boolean createStudent(Student newStudent) throws SQLException {
+    public boolean createStudent(Student newStudent) {
         String query = "insert into registration.student (id,First_Name,Last_Name" +
                 ",Email,Password,Join_Year) values ('" + newStudent.getId() + "', '" +
                 newStudent.getFirstName() + "', '" + newStudent.getLastName() + "', '" +
@@ -25,7 +25,7 @@ public class StudentDAOImpl implements StudentDAO {
         return UpdateDB.Update(query);
     }
 
-    public boolean updateStudent(Student student) throws SQLException {
+    public boolean updateStudent(Student student) {
         String query = "Update registration.student set " +
                 "First_Name='" + student.getFirstName() + "', " +
                 "Last_Name='" + student.getLastName() + "', " +
@@ -36,7 +36,7 @@ public class StudentDAOImpl implements StudentDAO {
         return UpdateDB.Update(query);
     }
 
-    public boolean deleteById(int id) throws SQLException {
+    public boolean deleteById(int id) {
         String query = "delete From registration.student where id =" + id;
 
         return UpdateDB.Update(query);

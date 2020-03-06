@@ -1,4 +1,4 @@
-package com.Mustafa.regestraion.model.entity;
+package com.Mustafa.regestraion.model.entity.student;
 
 public class StudentBuilder {
     private String id;

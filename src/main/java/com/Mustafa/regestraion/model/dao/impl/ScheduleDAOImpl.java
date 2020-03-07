@@ -23,6 +23,13 @@ public class ScheduleDAOImpl implements ScheduleDAO {
     }
 
     @Override
+    public boolean isRegistered(String studentId, String courseId) {
+        StringBuilder query = new StringBuilder("SELECT * From registration.schedule where student_id='").
+                append(studentId).append("' and course_Id='").append(courseId).append("'");
+        return FindScheduleDB.findSchedule(query, "student_id") != null;
+    }
+
+    @Override
     public boolean addSchedule(String studentId, String courseId) {
         StringBuilder query = new StringBuilder("insert into registration.schedule values('");
         query.append(studentId).append("','").append(courseId).append("')");

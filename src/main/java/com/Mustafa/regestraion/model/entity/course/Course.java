@@ -1,17 +1,19 @@
 package com.Mustafa.regestraion.model.entity.course;
 
+import java.time.LocalDate;
+
 public class Course {
     private String id;
     private String code;
     private String course_Name;
     private String instructorId;
     private int capacity;
-    private int startingDate;
+    private LocalDate startingDate;
     private int duration;
     private int hour;
 
     public Course(String id, String code, String course_Name, String instructorId,
-                  int capacity, int startingDate, int duration, int hour) {
+                  int capacity, LocalDate startingDate, int duration, int hour) {
         this.id = id;
         this.code = code;
         this.course_Name = course_Name;
@@ -62,11 +64,11 @@ public class Course {
         this.capacity = capacity;
     }
 
-    public int getStartingDate() {
+    public LocalDate getStartingDate() {
         return startingDate;
     }
 
-    public void setStartingDate(int startingDate) {
+    public void setStartingDate(LocalDate startingDate) {
         this.startingDate = startingDate;
     }
 

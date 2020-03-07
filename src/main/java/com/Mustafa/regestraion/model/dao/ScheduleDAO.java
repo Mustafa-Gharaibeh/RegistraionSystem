@@ -7,6 +7,8 @@ public interface ScheduleDAO {
 
     List<String> findCourses(String StudentId);
 
+    boolean isRegistered(String studentId, String courseId);
+
     boolean addSchedule(String studentId, String courseId);
 
 }

@@ -1,12 +1,14 @@
 package com.Mustafa.regestraion.model.entity.course;
 
+import java.time.LocalDate;
+
 public class CourseBuilder {
     private String id;
     private String code;
     private String course_Name;
     private String instructorId;
     private int capacity;
-    private int startingDate;
+    private LocalDate startingDate;
     private int duration;
     private int hour;
 
@@ -35,7 +37,7 @@ public class CourseBuilder {
         return this;
     }
 
-    public CourseBuilder setStartingDate(int startingDate) {
+    public CourseBuilder setStartingDate(LocalDate startingDate) {
         this.startingDate = startingDate;
         return this;
     }

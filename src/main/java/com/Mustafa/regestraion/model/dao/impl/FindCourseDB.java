@@ -36,7 +36,7 @@ public class FindCourseDB {
                     setCourse_Name(resultSet.getString(3)).
                     setInstructorId(resultSet.getString(4)).
                     setCapacity(resultSet.getInt(5)).
-                    setStartingDate(resultSet.getInt(6)).
+                    setStartingDate(resultSet.getDate(6).toLocalDate()).
                     setDuration(resultSet.getInt(7)).
                     setHour(resultSet.getInt(8)).build();
         }
